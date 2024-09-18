@@ -33,15 +33,29 @@
     text-decoration: underline;
     cursor: pointer;
   }
+  main h1{
+    animation-name: destaque;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes destaque {
+    100%{
+      transform: translateY(-3px);
+    }
+  }
+
  </style>
 <body>
 
-  <header class="row" style="border-bottom: 1px solid black;">
+  <header class="row align-items-center" style="border-bottom: 1px solid black; background-color: bisque;">
     <div class="col-12 col-sm-6 "> <img
-        src="data:image/png;base64,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"
-        class="img-fluid" alt="logo" width="200px"></div>
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHDqy0mD_crnBTxoyh6ipaD7rN-Hc_iW5TGg&s"
+        class="img-fluid" alt="logo" width="110px"></div>
     <div class="col col-sm-6">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,6 +111,12 @@
       <div class="col-sm"><h1>localização</h1>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.2691921205114!2d-47.662310324779675!3d-15.630647318944527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a133c31d28571%3A0x2a75bc0e0f962e1b!2sCentro%20Educacional%20Stella%20dos%20Cherubins%20Guimar%C3%A3es%20Trois!5e0!3m2!1spt-BR!2sbr!4v1726483321694!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
+    <div class="row">
+      <div class="col-12 text-center"></div>
+      <div class="col-12 text-center"></div>
+      <div class="col-12 text-center"></div>
+      <div class="col-12 text-center"></div>
+    </div>
   </main>
   <footer class="container-fluid w-100 ps-5 pt-2 pb-3" style="background-color: bisque; border-top: 1px solid black;">
       <div class="row">
@@ -141,7 +161,7 @@
       <hr>
       <div class="row " >
         <div class="col text-center">
-            <p>@2024 Luiz Gustavo | Curso técnico Ced Stella | Designer web </p>
+            <p>@2024 Grupo web | Curso técnico Ced Stella | Designer & desenvolvimento  </p>
             <p>Todos os direitos reservados</p>
         </div>
       </div>
@@ -152,4 +172,4 @@
     crossorigin="anonymous"></script>
 </body>
 
-</html>*
+</html>
